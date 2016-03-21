@@ -68,7 +68,7 @@ gulp.task('js', function() {
 
 // move fonts
 gulp.task('fonts', function() {
-   return gulp.src([	'fonts/*.eot','fonts/*.woff','fonts/*.svg','fonts/*.ttf'])
+   return gulp.src([	'fonts/*.eot','fonts/*.woff','fonts/*.svg','fonts/*.ttf','fonts/*.otf'])
    .pipe(gulp.dest('app/fonts/'))
 });
 

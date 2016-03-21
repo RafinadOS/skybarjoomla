@@ -114,3 +114,68 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+@font-face {
+  font-family: 'Proxima';
+  src: url('../fonts/ProximaNovaACond-Extrabld.eot?#iefix') format('embedded-opentype'), url('../fonts/ProximaNovaACond-Extrabld.otf') format('opentype'), url('../fonts/ProximaNovaACond-Extrabld.woff') format('woff'), url('../fonts/ProximaNovaACond-Extrabld.ttf') format('truetype'), url('../fonts/ProximaNovaACond-Extrabld.svg#ProximaNovaACond-Extrabld') format('svg');
+  font-weight: 900;
+  font-style: normal;
+}
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Proxima';
+  font-size: 16px;
+  background: url('../img/bg.jpg') center top no-repeat;
+  background-size: cover;
+}
+header {
+  clear: both;
+  display: block;
+  overflow: hidden;
+  height: 100px;
+  background: rgba(0, 0, 0, 0.5);
+}
+.header {
+  clear: both;
+  display: block;
+  overflow: hidden;
+  width: 1200px;
+  height: 100px;
+  margin: auto;
+}
+.header-logo {
+  float: left;
+  width: 134px;
+  height: 100px;
+  background: url('../img/logo.svg') center center no-repeat;
+  margin: 0 0 0 148px;
+}
+.header-menu {
+  float: left;
+  overflow: hidden;
+  height: 100px;
+  padding: 0 0 0 70px;
+}
+.header-menu__item {
+  float: left;
+  overflow: hidden;
+  height: 100px;
+}
+.header-menu__item a {
+  display: block;
+  overflow: hidden;
+  line-height: 100px;
+  padding: 0 32px;
+  color: #a6a4a8;
+  text-decoration: none;
+  font-size: 15px;
+  font-family: "Proxima Nova";
+  font-weight: 900;
+  -webkit0transition: 0.2s;
+  -moz-transition: 0.2s;
+  transition: 0.2s;
+}
+.header-menu__item a:hover {
+  color: #fff;
+}

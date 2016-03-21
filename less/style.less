@@ -1,3 +1,66 @@
 @import "reset.less";
 @import "fonts.less";
 @import "texts.less";
+
+html,body {
+	padding: 0;
+	margin: 0;
+	font-family: 'Proxima';
+	font-size: 16px;
+	background: url('../img/bg.jpg') center top no-repeat;
+	background-size: cover;
+}
+.clear() {
+	clear: both;
+	display: block;
+	overflow: hidden;
+}
+.transition(@trns: .2s) {
+	-webkit0transition: @trns;
+	-moz-transition: @trns;
+	transition: @trns;
+}
+header {
+	.clear();
+	height: 100px;
+	background: rgba(0,0,0,.5);
+}
+.header {
+	.clear();
+	width: 1200px;
+	height: 100px;
+	margin: auto;
+	&-logo {
+		float: left;
+		width: 134px;
+		height: 100px;
+		background: url('../img/logo.svg') center center no-repeat;
+		margin: 0 0 0 148px;
+	}
+	&-menu {
+		float: left;
+		overflow: hidden;
+		height: 100px;
+		padding: 0 0 0 70px;
+		&__item {
+			float: left;
+			overflow: hidden;
+			height: 100px;
+			& a {
+				display: block;
+				overflow: hidden;
+				line-height: 100px;
+				padding: 0 32px;
+				color: #a6a4a8;
+				text-decoration: none;
+				font-size: 15px;
+				font-family: "Proxima Nova";
+				font-weight: 900;
+				.transition();
+				&:hover {
+					color: #fff;
+				}
+			}
+		}
+	}
+}
