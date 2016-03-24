@@ -135,6 +135,8 @@ header {
   overflow: hidden;
   height: 100px;
   background: rgba(0, 0, 0, 0.5);
+  position: relative;
+  z-index: 9;
 }
 .header {
   clear: both;
@@ -144,7 +146,6 @@ header {
   height: 100px;
   margin: auto;
   position: relative;
-  z-index: 99;
 }
 .header-logo {
   float: left;
@@ -275,6 +276,9 @@ header {
   -moz-transition: 0.3s;
   transition: 0.3s;
 }
+.shared:hover > a {
+  opacity: .7;
+}
 .shared__icon {
   display: block;
   width: 50px;
@@ -282,7 +286,9 @@ header {
   margin: 0 auto 24px auto;
   text-decoration: none;
   background: url('../img/social.png') no-repeat;
-  opacity: 0;
+  -webkit0transition: 0.2s;
+  -moz-transition: 0.2s;
+  transition: 0.2s;
 }
 .shared__icon-plus {
   width: 100px;
@@ -304,33 +310,18 @@ header {
 }
 .shared__icon-vk {
   background-position: 0 0;
-  -webkit0transition: 0.3s;
-  -moz-transition: 0.3s;
-  transition: 0.3s;
 }
 .shared__icon-fb {
   background-position: -50px 0;
-  -webkit0transition: 0.6s;
-  -moz-transition: 0.6s;
-  transition: 0.6s;
 }
 .shared__icon-instagramm {
   background-position: -100px 0;
-  -webkit0transition: 0.9s;
-  -moz-transition: 0.9s;
-  transition: 0.9s;
 }
 .shared__icon-twitter {
   background-position: -150px 0;
-  -webkit0transition: 1.2s;
-  -moz-transition: 1.2s;
-  transition: 1.2s;
 }
 .shared__icon-periscop {
   background-position: -200px 0;
-  -webkit0transition: 1.5s;
-  -moz-transition: 1.5s;
-  transition: 1.5s;
 }
 .show-shared .shared {
   right: 0;
@@ -338,6 +329,17 @@ header {
 .show-shared .shared__icon-plus {
   margin: 0;
 }
-.show-shared .shared__icon {
-  opacity: 1;
+.overlay {
+  display: none;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: 99;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.overlay-show {
+  display: block;
 }
