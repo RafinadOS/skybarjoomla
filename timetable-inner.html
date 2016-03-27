@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="theme-color" content="#86468a">
+	<title>SkyBar</title>
+	<link rel="stylesheet" href="./css/style.css">
+</head>
+<body class="inner inner-article">
+<header>
+	<div class="header">
+		<a class="header-logo" href="./"></a>
+		<ul class="header-menu">
+			<li class="header-menu__item"><a href="#">Главная</a></li>
+			<li class="header-menu__item"><a href="#">Афиша</a></li>
+			<li class="header-menu__item"><a href="#">Караоке</a></li>
+			<li class="header-menu__item"><a href="#">Заказ столов</a></li>
+			<li class="header-menu__item"><a href="#">Контакты</a></li>
+			<a href="#" class="header-menu__open"><span></span></a>
+		</ul>
+	</div>
+</header>
+<div class="shared">
+	<a href="#" class="shared__icon shared__icon-plus">+</a>
+	<a href="#" class="shared__icon shared__icon-vk"></a>
+	<a href="#" class="shared__icon shared__icon-fb"></a>
+	<a href="#" class="shared__icon shared__icon-instagramm"></a>
+	<a href="#" class="shared__icon shared__icon-twitter"></a>
+	<a href="#" class="shared__icon shared__icon-periscop"></a>
+</div>
+<div class="container">
+	<div class="content">
+		<div class="content-article">
+			<img src="images/tiesto.jpg" alt="" class="content-article__image">
+			<p class="content-article__date">23 марта 23:00</p>
+			<h1 class="content-article__title">DJ TIESTO</h1>
+
+		</div>
+	</div>
+</div>
+
+
+
+
+<footer>
+	<div class="footer">
+		<div class="footer__logo">SKY BAR 2016</div>
+		<div class="footer__text">
+			<a href="#" class="footer__text-newsletter">Подписаться на новости</a> | <a href="#" class="footer__text-callback">Заказть обратный звонок</a></div>
+		<a href="#" class="footer__periscope">PERISCOPE</a>
+		
+	</div>
+</footer>
+
+<div class="md-modal md-effect-11" id="newsletter">
+	<div class="md-content">
+		<p class="md-content__title">Подписка на новости</p>
+		<p class="md-content__text">Введите свой e-mail чтобы получать самую последнюю<br>информацию от Sky Bar</p>
+		<form action="">
+			<input type="email" class="md-content__input" placeholder="example@gmail.com" requared="requared">
+			<input type="button" class="md-content__button" value="Подписаться">
+		</form>
+		<a href="#" class="md-content__close"></a>
+	</div>
+</div>
+
+<div class="md-modal md-effect-11" id="callback">
+	<div class="md-content">
+		<p class="md-content__title">Обратный звонок</p>
+		<p class="md-content__text">Введите свой номер телефона<br>и мы перезвоним в блиайжее время</p>
+		<input type="text" class="md-content__input" id="phone" placeholder="+7 (999) 999 9999">
+		<input type="button" class="md-content__button" value="Отправить">
+		<a href="#" class="md-content__close"></a>
+	</div>
+</div>
+
+<div class="overlay overlay-show"></div>
+	<script src="./js/jquery.min.js"></script>
+	<script src="./js/owl.carousel.min.js"></script>
+	<script src="./js/main.js"></script>
+</body>
+</html>

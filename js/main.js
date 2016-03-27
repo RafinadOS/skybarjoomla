@@ -86,4 +86,7 @@ $(document).ready(function($) {
         $('#callback').removeClass('md-show');
     });
 
+    var wbody = $('body').width();
+    $('.content-article__image').width(wbody);
+
 });

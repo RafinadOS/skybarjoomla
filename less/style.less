@@ -9,10 +9,17 @@
 html,body {
 	padding: 0;
 	margin: 0;
-	font-family: "Proxima Nova";
+	font-family: 'ProximaNova';
 	font-size: 16px;
-	background-size: cover;
+  position: relative;
+}
+body.main {
   overflow: hidden;
+  min-height: 100%;
+  min-width: 100%;
+  position: fixed;
+  top: 0;
+  bottom: 0;
 }
 .clear() {
 	clear: both;
@@ -28,7 +35,10 @@ header {
 	.clear();
 	height: 100px;
 	background: rgba(0,0,0,.5);
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
   overflow: visible;
   z-index: 9;
 }
@@ -61,8 +71,7 @@ header {
 				color: #a6a4a8;
 				text-decoration: none;
 				font-size: 15px;
-				font-weight: 700;
-				font-family: "Proxima Nova";
+				font-weight: 600;
 				text-transform: uppercase;
 				.transition();
 				&:hover {
@@ -153,11 +162,11 @@ header {
 	margin: auto;
   position: fixed;
 	top: 50%;
-	right: -100px;
+	right: 0;
 	z-index: 999;
-	-webkit-transform: translate(0,-50%);
-	-ms-transform: translate(0,-50%);
-  transform: translate(0,-50%);
+	-webkit-transform: translate(100px,-50%);
+	-ms-transform: translate(100px,-50%);
+  transform: translate(100px,-50%);
   .transition(.3s);
     &__icon {
     	display: block;
@@ -203,7 +212,9 @@ header {
     }
 }
 .show-shared .shared {
-	right: 0;
+  -webkit-transform: translate(0,-50%);
+  -ms-transform: translate(0,-50%);
+  transform: translate(0,-50%);
   z-index: 9999999;
 }
 .show-shared .shared__icon-plus {
@@ -214,8 +225,8 @@ header {
 .overlay {
   display: none;
   position: absolute;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  min-height: 100%;
   z-index: 999999;
   top: 0;
   bottom: 0;
@@ -234,7 +245,7 @@ footer {
   height: 70px;
   background: #000;
   position: relative;
-  z-index: 9;
+  z-index: 99;
   position: fixed;
   bottom: 0;
   left: 0;
@@ -323,7 +334,7 @@ footer {
     display: block;
     width: 100%;
     text-align: center;
-    font-family: "Proxima Nova";
+    font-family: 'ProximaNova';
     border: none;
     font-size: 24px;
     line-height: 50px;
@@ -332,8 +343,8 @@ footer {
     color: #000;
   }
   &__button {
-    font-family: "Proxima Nova";
-    font-weight: 700;
+    font-family: 'ProximaNova';
+    font-weight: 600;
     border: 2px solid #86468a;
     line-height: 58px;
     padding: 0 50px;
@@ -359,8 +370,13 @@ footer {
   }
 }
 .instagramm-scroll-show .instagramm-scroll {
-  bottom: 70px;
+  -webkit-transform: translate(0,0);
+  -ms-transform: translate(0,0);
+  transform: translate(0,0);
   z-index: 9999999;
+}
+.instagramm-scroll-show .inst-carousel {
+  opacity: 1
 }
 .instagramm-scroll-show .instagramm-scroll__wrapper-show:after {
   -webkit-transform: rotate(135deg);
@@ -369,11 +385,16 @@ footer {
 }
 .instagramm-scroll {
   position: absolute;
-  bottom: -130px;
+  bottom: 70px;
   left: 0;
   right: 0;
+  width: 100%;
   height: 200px !important;
   overflow: visible;
+  -webkit-transform: translate(0,200px);
+  -ms-transform: translate(0,200px);
+  transform: translate(0,200px);
+  z-index: 9;
   .transition(.5s);
   &__wrapper {
     .clear();
@@ -425,6 +446,8 @@ footer {
   left: 0 !important;
   right: 0 !important;
   top: 0 !important;
+  opacity: 0;
+   .transition(.3s);
   & .item {
     width: 100% !important;
     height: 200px !important;
@@ -443,10 +466,165 @@ footer {
     }
   }
 }
-
-
-
-
+.container {
+  .clear();
+  width: 100%;
+  position: relative;
+}
+.content {
+  .clear();
+  width: 1200px;
+  margin: auto;
+  padding: 190px 0 150px 0;
+  &-news {
+    .clear();
+    font-size: 0;
+    letter-spacing: -9999px;
+    &__item {
+      letter-spacing: normal;
+      display: inline-block;
+      color: #474747;
+      font-size: 18px;
+      width: 400px;
+      padding: 0 23px;
+      vertical-align: top;
+      &-date {
+        color: #000;
+        font-weight: 300;
+        font-size: 24px;
+        margin: 0 0 15px 0;
+      }
+      &-title {
+        color: #000;
+        font-size: 48px;
+        font-weight: 600;
+        text-transform: uppercase;
+        margin: 0 0 25px 0;
+      }
+      &-intro {
+        margin: 0 0 15px 0;
+      }
+      &-readmore {
+        display: inline-block;
+        line-height: 70px;
+        color: #86468a;
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        text-decoration: none;
+        position: relative;
+        padding: 0 50px 0 0;
+        background: url('../img/readmore.png') right top no-repeat;
+        z-index: 9;
+        .transition();
+        &:hover {
+          padding-right: 60px;
+        }
+      }
+    }
+  }
+}
+.inner-article .content {
+  padding-top: 0;
+  overflow: visible;
+}
+.content-article {
+  min-height: 700px;
+  &__image {
+    position: absolute;
+    top: 0;
+    min-width: 1200px;
+    left: 50%;
+    -webkit-transform: translate(-50%,0);
+    -ms-transform: translate(-50%,0);
+    transform: translate(-50%,0);
+  }
+}
+.events {
+  .clear();
+  width: 100%;
+  list-style: none;
+  margin: 0 0 110px 0;
+  &-item {
+    color: #fff;
+    height: 400px;
+    position: relative;
+    vertical-align: middle;
+    background: #000;
+    &__info {
+      .clear();
+      display: inline-block;
+      vertical-align: middle;
+      padding: 175px 85px 0 85px;
+      &-date {
+        font-size: 24px;
+        font-weight: 300;
+        position: relative;
+        margin: 0 0 10px 0;
+        z-index: 9;
+      }
+      &-title {
+        font-size: 48px;
+        font-weight: 600;
+        position: relative;
+        margin: 0 0 15px 0;
+        z-index: 9;
+      }
+      &-readmore {
+        display: inline-block;
+        line-height: 70px;
+        color: #86468a;
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        text-decoration: none;
+        position: relative;
+        padding: 0 50px 0 0;
+        background: url('../img/readmore.png') right top no-repeat;
+        z-index: 9;
+        .transition();
+        &:hover {
+          padding-right: 60px;
+        }
+      }
+      &-image {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        -webkit-transform: translate(-50%,-50%);
+        -ms-transform: translate(-50%,-50%);
+        transform: translate(-50%,-50%);
+      }
+    }
+    &:nth-child(1) {
+      .clear();
+      width: 100%;
+    }
+    &:nth-child(2) {
+      float: left;
+      overflow: hidden;
+      width: 50%;
+    }
+    &:nth-child(3) {
+      float: right;
+      overflow: hidden;
+      width: 50%;
+    }
+    &:nth-child(4) {
+      .clear();
+      width: 100%;
+    }
+  }
+}
+.events-item:nth-child(2) .events-item__info,
+.events-item:nth-child(3) .events-item__info {
+  padding-top: 125px;
+}
+.inner footer {
+  position: absolute;
+}
 
 
 
