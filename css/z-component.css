@@ -87,10 +87,6 @@ perspective effects (not including the modals and the overlay).
 	font-size: 1.15em;
 }
 
-.md-content > div p {
-	margin: 0;
-	padding: 10px 0;
-}
 
 .md-content > div ul {
 	margin: 0;

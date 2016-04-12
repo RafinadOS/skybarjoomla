@@ -475,6 +475,7 @@ footer {
   line-height: 36px;
   color: #6f5d70;
   margin: 0 0 105px 0;
+  font-weight: 400;
 }
 .md-content__input {
   clear: both;
@@ -488,6 +489,12 @@ footer {
   border-bottom: 1px solid #6f5d70;
   margin: 0 0 120px 0;
   color: #000;
+  -webkit0transition: 0.2s;
+  -moz-transition: 0.2s;
+  transition: 0.2s;
+}
+.md-content__input.rsform-error {
+  background: #fbe9e9;
 }
 .md-content__button {
   font-family: 'ProximaNova';
@@ -762,6 +769,17 @@ footer {
   -webkit0transition: 0.2s;
   -moz-transition: 0.2s;
   transition: 0.2s;
+}
+.events-item__info-readmorefull {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: block;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 99;
 }
 .events-item__info-readmore:hover {
   padding-right: 60px;

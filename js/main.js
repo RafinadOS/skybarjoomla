@@ -34,7 +34,6 @@ $('.inst-carousel').owlCarousel({
     }
 });
 
-
 $(document).ready(function($) {
     $('.overlay').removeClass('overlay-show');
 
@@ -88,5 +87,11 @@ $(document).ready(function($) {
 
     var wbody = $('body').width();
     $('.content-article__image').width(wbody);
+
+    $('.md-content__input').focus(function() {
+        $(this).removeClass('rsform-error');
+    });
+
+    
 
 });
