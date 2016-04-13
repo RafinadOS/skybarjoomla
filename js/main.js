@@ -1,5 +1,5 @@
 $('.owl-carousel').owlCarousel({
-    loop:true,
+    loop:false,
     margin:0,
     nav:true,
     responsive:{
@@ -9,7 +9,7 @@ $('.owl-carousel').owlCarousel({
     }
 });
 $('.inst-carousel').owlCarousel({
-    loop:true,
+    loop:false,
     margin:0,
     nav:false,
     responsive:{

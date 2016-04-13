@@ -535,11 +535,122 @@ footer {
 }
 .content-article {
   min-height: 700px;
+  &__brcmb {
+    .clear();
+    padding: 60px 0;
+    color: #86468a;
+    font-size: 24px;
+    font-weight: 600;
+    & span {
+      display: inline-block;
+      height: 30px;
+      line-height: 30px;
+      &.wrp-brcmb {
+        width: 35px;
+        margin: 0 13px;
+        background: url('../images/readmore.png') 0 -12px no-repeat;
+      }
+    }
+    & a {
+      display: inline-block;
+      height: 30px;
+      line-height: 30px;
+      font-weight: 300;
+      text-decoration: none;
+      color: #484848;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  &__text {
+    .clear();
+    line-height: 36px;
+    color: #484848;
+    font-size: 24px;
+    & p {
+      margin: 0 0 30px 0;
+    }
+    & .caption {
+      margin: 0 0 30px 0;
+      font-size: 36px;
+      font-weight: 600;
+      color: #86468a;
+      line-height: normal;
+      text-transform: uppercase;
+    }
+  }
+  &-noimage {
+    padding: 190px 0 0 0;
+  }
+  &-haveimage {
+    padding: 550px 0 0 0;
+  }
+  &__head {
+    .clear();
+    position: absolute;
+    display: block;
+    width: 1200px;
+    top: 0;
+    color: #fff;
+    z-index: 9;
+    top: 200px;
+    &-link {
+      float: right;
+      width: 390px;
+      height: 58px;
+      line-height: 58px;
+      text-decoration: none;
+      padding: 0 0 0 65px;
+      font-size: 14px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #ffffff;
+      font-weight: 600;
+      border: 2px solid #86468a;
+      position: relative;
+      margin: 29px 0;
+      .transition();
+      &:hover {
+        background: rgba(134,70,138,.2);
+      }
+      &:after {
+        content: '';
+        position: absolute;
+        display: block;
+        top: 50%;
+        margin: -3px 0 0 0;
+        width: 8px;
+        height: 8px;
+        right: 62px;
+        border-top: 1px solid #86468a;
+        border-right: 1px solid #86468a;
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        transform: rotate(45deg);
+      }
+    }
+    &__info {
+      font-size: 48px;
+      font-weight: 300;
+      color: #ffffff;
+      margin: 0 0 5px 0;
+    }
+    &__title {
+      font-size: 100px;
+      font-weight: 700;
+      float: left;
+      max-width: 490px;
+    }
+  }
   &__image {
     position: absolute;
     top: 0;
     min-width: 1200px;
+    height: 550px;
     left: 50%;
+    background-size: cover;
+    background-position: center center;
     -webkit-transform: translate(-50%,0);
     -ms-transform: translate(-50%,0);
     transform: translate(-50%,0);

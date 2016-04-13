@@ -11,6 +11,11 @@
 <head>
 <!-- Developer by Pavel Rafeev pavel-rafeev.ru -->
 <?php
+$Itemid = JRequest::getInt( 'Itemid', 1, 'get' );
+$option = JRequest::getVar('option', null); 
+$view = JRequest::getVar('view', null); 
+$document 	= & JFactory::getDocument();
+$user = & JFactory::getUser();
 $headlink = $this->getHeadData();
 unset($headlink['scripts']['/media/system/js/caption.js']);
 unset($headlink['scripts']['/media/system/js/validate.js']);
@@ -42,7 +47,7 @@ unset($this->_generator); /* отключаем metagenerator */
 <jdoc:include type="head" />
 <link href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/css/style.css" rel="stylesheet" type="text/css" />
 </head>
-<body <?php if($this->countModules('slider')) : ?>class="main"<?php else: ?>class="inner"<?php endif; ?>>
+<body <?php if($this->countModules('slider')) : ?>class="main"<?php else: ?>class="inner<?php if (($option == 'com_content') && ($view == 'article')) { ?> inner-article<?php } else {} ?>"<?php endif; ?>>
 <header>
 	<div class="header">
 		<a class="header-logo" href="./"></a>
@@ -65,9 +70,19 @@ unset($this->_generator); /* отключаем metagenerator */
 	/* -------------------------------------------------------------------- */
 	/* -------------------------------------------------------------------- */	?>
 <?php if($this->countModules('slider')) : ?>
-<div class="owl-carousel">
-	<jdoc:include type="modules" name="slider" style="my"/>
-</div>
+
+	<?php if($this->countModules('slider')) : ?>
+	<div class="owl-carousel">
+		<jdoc:include type="modules" name="slider" style="my"/>
+	</div>
+	<?php endif; ?>
+
+	<?php if($this->countModules('slider-en')) : ?>
+	<div class="owl-carousel">
+		<jdoc:include type="modules" name="slider-en" style="my"/>
+	</div>
+	<?php endif; ?>
+
 <div class="instagramm-scroll">
 	<div class="instagramm-scroll__wrapper">
 		<a href="#" class="instagramm-scroll__wrapper-show">INSTAGRAMM</a>
